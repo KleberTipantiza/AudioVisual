@@ -19,6 +19,11 @@ public class Pelicula extends ContenidoAudiovisual implements ActoresGestion {
         return estudio;
     }
 
+    // Método getter para 'actores'
+    public ArrayList<Actor> getActores() {
+        return actores;
+    }
+
     // Implementación de los métodos de ActoresGestion
     @Override
     public void agregarActor(Actor actor) {
@@ -34,7 +39,7 @@ public class Pelicula extends ContenidoAudiovisual implements ActoresGestion {
     public void mostrarActores() {
         System.out.println("Actores: ");
         for (Actor actor : actores) {
-            actor.mostrarDetalles(); // Muestra el nombre de cada actor
+            System.out.println("Nombre: " + actor.getNombre());
         }
     }
 
@@ -46,6 +51,8 @@ public class Pelicula extends ContenidoAudiovisual implements ActoresGestion {
         System.out.println("Duración en minutos: " + getDuracionEnMinutos());
         System.out.println("Género: " + getGenero());
         System.out.println("Estudio: " + estudio);
-        mostrarActores(); // Muestra los actores
+        mostrarActores(); // Llamada para mostrar actores
     }
+
 }
+

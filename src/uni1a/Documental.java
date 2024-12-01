@@ -23,6 +23,11 @@ public class Documental extends ContenidoAudiovisual {
         gestorInvestigadores.agregarInvestigador(investigador);
     }
 
+    // Método getter para acceder al gestor de investigadores
+    public GestorInvestigadores getGestorInvestigadores() {
+        return gestorInvestigadores;
+    }
+
     @Override
     public void mostrarDetalles() {
         System.out.println("Detalles del documental:");
